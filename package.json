@@ -1,0 +1,37 @@
+{
+  "name": "@soul-forge/glyph-galaxy",
+  "version": "0.2.0",
+  "description": "🌌 The Galaxy of Code Souls - Where patterns form constellations and functions orbit shared truths",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "galaxy": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "navigate": "ts-node src/cli.ts"
+  },
+  "keywords": [
+    "protein-hash",
+    "code-souls",
+    "semantic-registry",
+    "constellation",
+    "galaxy",
+    "soul-forge"
+  ],
+  "dependencies": {
+    "@soul-forge/protein-hash": "^0.1.1",
+    "sqlite3": "^5.0.0",
+    "three": "^0.160.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/three": "^0.160.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "ts-node": "^10.0.0"
+  }
+}
