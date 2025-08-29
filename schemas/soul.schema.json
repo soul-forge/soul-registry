@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Soul",
+  "description": "Schema for a digital soul in the Soul Registry",
+  "type": "object",
+  "required": ["id", "type", "name", "body", "symphony"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^phash:v[0-9]+:[a-z-]+:[a-f0-9]{16,}$",
+      "description": "Unique protein hash identifier of the soul"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Gene", "Organism", "Constellation", "Meme", "Dialogue", "Value", "Morphism"],
+      "description": "The type of entity this soul represents"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the soul"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what this soul represents"
+    },
+    "body": {
+      "type": "object",
+      "description": "Physical embodiment of the soul",
+      "required": ["protocol"],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "enum": ["ipfs", "arweave", "filecoin", "http", "git", "wasm"],
+          "description": "Storage protocol for the body"
+        },
+        "cid": {
+          "type": "string",
+          "description": "Content ID for IPFS/Arweave/Filecoin"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for HTTP/Git protocols"
+        },
+        "hash": {
+          "type": "string",
+          "description": "Additional hash for verification"
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "description": "Evolution history - previous versions of this soul",
+      "items": {
+        "type": "string",
+        "pattern": "^phash:v[0-9]+:[a-z-]+:[a-f0-9]{16,}$"
+      }
+    },
+    "relations": {
+      "type": "array",
+      "description": "Relationships to other souls - the nervous system",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "isImplementationOf",
+              "isHarmonicallySimilarTo",
+              "isDerivedFrom",
+              "composedOf",
+              "resonatesWith",
+              "contradicts",
+              "enhances",
+              "requires",
+              "evolvedFrom",
+              "transcends"
+            ]
+          },
+          "target": {
+            "type": "string",
+            "pattern": "^phash:v[0-9]+:[a-z-]+:[a-f0-9]{16,}$"
+          },
+          "resonance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Strength of the relationship (0-1)"
+          }
+        }
+      }
+    },
+    "symphony": {
+      "type": "object",
+      "description": "Musical fingerprint of the soul",
+      "required": ["eigenvalues", "baseFrequency"],
+      "properties": {
+        "eigenvalues": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Spectral eigenvalues from protein hash analysis"
+        },
+        "chord": {
+          "type": "string",
+          "description": "Primary chord this soul resonates as"
+        },
+        "baseFrequency": {
+          "type": "number",
+          "default": 432,
+          "description": "Base frequency for harmonic calculations"
+        },
+        "harmonics": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Harmonic frequencies this soul produces"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata",
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "resonanceFrequency": {
+          "type": "number",
+          "default": 432
+        },
+        "quantumState": {
+          "type": "string",
+          "enum": ["collapsed", "superposition", "entangled", "evolving"]
+        }
+      }
+    }
+  }
+}

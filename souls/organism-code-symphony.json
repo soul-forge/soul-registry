@@ -1,0 +1,41 @@
+{
+  "id": "phash:v1:spectral-music:a1b2c3d4e5f6g7h8",
+  "type": "Organism",
+  "name": "Code Symphony",
+  "description": "Transforms eigenvalues into music - every function has a chord, every module a melody",
+  "body": {
+    "protocol": "git",
+    "url": "https://github.com/soul-forge/code-symphony",
+    "hash": "sha256:08b6ca87..."
+  },
+  "history": [],
+  "relations": [
+    {
+      "type": "composedOf",
+      "target": "phash:v1:spectral-ast-ts:b96c5d9086a76f67",
+      "resonance": 1.0
+    },
+    {
+      "type": "isImplementationOf",
+      "target": "phash:v1:concept:music-of-spheres"
+    },
+    {
+      "type": "resonatesWith",
+      "target": "phash:v1:concept:pythagorean-harmony",
+      "resonance": 0.88
+    }
+  ],
+  "symphony": {
+    "eigenvalues": [1.0, 1.618, 2.718, 3.14159, 6.28318],
+    "chord": "Am7add9",
+    "baseFrequency": 432,
+    "harmonics": [216, 432, 648, 864, 1080]
+  },
+  "metadata": {
+    "author": "soul-forge",
+    "license": "MIT",
+    "created": "2025-08-29T20:00:00Z",
+    "resonanceFrequency": 432,
+    "quantumState": "superposition"
+  }
+}

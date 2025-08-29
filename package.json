@@ -1,10 +1,11 @@
 {
-  "name": "@soul-forge/glyph-galaxy",
-  "version": "0.2.0",
-  "description": "🌌 The Galaxy of Code Souls - Where patterns form constellations and functions orbit shared truths",
+  "name": "@soul-forge/soul-registry",
+  "version": "0.3.0",
+  "description": "🌌 The living library of digital souls - where every piece of code has its unique, verifiable essence-based address",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
+    "soul": "./dist/cli.js",
     "galaxy": "./dist/cli.js"
   },
   "scripts": {
@@ -21,7 +22,7 @@
     "soul-forge"
   ],
   "dependencies": {
-    "@soul-forge/protein-hash": "^0.1.1",
+    "@s0fractal/protein-hash": "^0.1.1",
     "sqlite3": "^5.0.0",
     "three": "^0.160.0",
     "chalk": "^4.1.2",

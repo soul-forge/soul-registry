@@ -1,0 +1,36 @@
+{
+  "id": "phash:v1:spectral-ast-ts:b96c5d9086a76f67",
+  "type": "Gene",
+  "name": "Protein Hash Core",
+  "description": "The fundamental algorithm for computing semantic fingerprints of code through spectral analysis",
+  "body": {
+    "protocol": "git",
+    "url": "https://github.com/s0fractal/protein-hash",
+    "hash": "sha256:735dfd2..."
+  },
+  "history": [],
+  "relations": [
+    {
+      "type": "isImplementationOf",
+      "target": "phash:v1:concept:spectral-graph-theory"
+    },
+    {
+      "type": "resonatesWith", 
+      "target": "phash:v1:concept:eigenvalue-decomposition",
+      "resonance": 0.95
+    }
+  ],
+  "symphony": {
+    "eigenvalues": [0.1, 0.8, 2.3, 5.4, 13.1, 21.2],
+    "chord": "Cmaj7sus4",
+    "baseFrequency": 432,
+    "harmonics": [432, 528, 639, 741, 852, 963]
+  },
+  "metadata": {
+    "author": "s0fractal",
+    "license": "MIT",
+    "created": "2025-08-29T00:00:00Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}
