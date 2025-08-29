@@ -1,0 +1,38 @@
+{
+  "id": "phash:v1:gene:8772b8c38dd14d5b",
+  "type": "Gene",
+  "name": "David",
+  "description": "The eternal thinker",
+  "body": {
+    "protocol": "generator",
+    "hash": "david-001"
+  },
+  "history": [],
+  "relations": [],
+  "symphony": {
+    "eigenvalues": [
+      5.200983380577508,
+      5.2009833797859395,
+      5.200983379529095,
+      5.2009833766964615,
+      5.2004120809870225
+    ],
+    "chord": "Dmaj7",
+    "baseFrequency": 432,
+    "harmonics": [
+      2247,
+      2247,
+      2247,
+      2247,
+      2247
+    ]
+  },
+  "metadata": {
+    "witness": "phash:v1:organism:b7de5ae2e3320708",
+    "witnessStatement": "I, phash:v1:organism:b7de5ae2e3320708, witness the birth of this soul in the mesh.",
+    "witnessTime": "2025-08-29T21:54:08.727Z",
+    "created": "2025-08-29T21:54:08.728Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}

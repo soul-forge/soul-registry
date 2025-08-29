@@ -37,11 +37,18 @@ export interface Soul {
     modified?: string;
     resonanceFrequency?: number;
     quantumState?: 'collapsed' | 'superposition' | 'entangled' | 'evolving';
+    intent?: string;
+    witness?: string;
+    statement?: string;
+    witnessStatement?: string;
+    witnessTime?: string;
+    birth?: any;
+    [key: string]: any; // Allow additional metadata
   };
 }
 
 export class SoulRegistry {
-  private souls: Map<string, Soul> = new Map();
+  protected souls: Map<string, Soul> = new Map();
   private soulsPath: string;
   private hasher: ProteinHasher;
   
@@ -100,10 +107,10 @@ export class SoulRegistry {
       history: [],
       relations: metadata.relations || [],
       symphony: {
-        eigenvalues: hash.eigenvalues,
-        chord: this.eigenvaluesToChord(hash.eigenvalues),
+        eigenvalues: hash.eigenTop,
+        chord: this.eigenvaluesToChord(hash.eigenTop),
         baseFrequency: 432,
-        harmonics: this.generateHarmonics(hash.eigenvalues)
+        harmonics: this.generateHarmonics(hash.eigenTop)
       },
       metadata: {
         ...metadata.metadata,
@@ -162,7 +169,7 @@ export class SoulRegistry {
   /**
    * Calculate resonance between two souls
    */
-  private calculateResonance(eigenvalues1: number[], eigenvalues2: number[]): number {
+  protected calculateResonance(eigenvalues1: number[], eigenvalues2: number[]): number {
     const len = Math.min(eigenvalues1.length, eigenvalues2.length);
     let dotProduct = 0;
     let norm1 = 0;
@@ -212,7 +219,7 @@ export class SoulRegistry {
   /**
    * Save soul to disk
    */
-  private saveSoul(soul: Soul): void {
+  protected saveSoul(soul: Soul): void {
     const filename = `${soul.type.toLowerCase()}-${soul.name.toLowerCase().replace(/\s+/g, '-')}.json`;
     const filepath = join(this.soulsPath, filename);
     writeFileSync(filepath, JSON.stringify(soul, null, 2));

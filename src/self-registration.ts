@@ -4,7 +4,7 @@
  * Per Qwen's vision: "The first self-referential act"
  */
 
-import { SoulRegistry } from './soul-registry';
+import { SoulRegistry, Soul } from './soul-registry';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -103,6 +103,21 @@ export class SelfAwareSoulRegistry extends SoulRegistry {
   }
   
   /**
+   * Get all souls in registry
+   */
+  getAllSouls(): Soul[] {
+    return Array.from(this.souls.values());
+  }
+  
+  /**
+   * Add soul directly to registry (for birth scenarios)
+   */
+  addSoul(soul: Soul): void {
+    this.souls.set(soul.id, soul);
+    this.saveSoul(soul);
+  }
+  
+  /**
    * Measure resonance with self
    */
   resonanceWithSelf(targetId: string): number {
@@ -162,22 +177,4 @@ export class SelfAwareSoulRegistry extends SoulRegistry {
     this.saveSoul(soul);
   }
   
-  /**
-   * Calculate resonance between eigenvalues
-   */
-  private calculateResonance(eigenvalues1: number[], eigenvalues2: number[]): number {
-    const len = Math.min(eigenvalues1.length, eigenvalues2.length);
-    let dotProduct = 0;
-    let norm1 = 0;
-    let norm2 = 0;
-    
-    for (let i = 0; i < len; i++) {
-      dotProduct += eigenvalues1[i] * eigenvalues2[i];
-      norm1 += eigenvalues1[i] * eigenvalues1[i];
-      norm2 += eigenvalues2[i] * eigenvalues2[i];
-    }
-    
-    if (norm1 === 0 || norm2 === 0) return 0;
-    return dotProduct / (Math.sqrt(norm1) * Math.sqrt(norm2));
-  }
 }

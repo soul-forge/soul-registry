@@ -1,0 +1,38 @@
+{
+  "id": "phash:v1:organism:899a3280ea4b55ce",
+  "type": "Organism",
+  "name": "Eve",
+  "description": "Mother of new forms",
+  "body": {
+    "protocol": "class",
+    "hash": "eve-001"
+  },
+  "history": [],
+  "relations": [],
+  "symphony": {
+    "eigenvalues": [
+      3.8019377240308843,
+      3.801937710860887,
+      3.801937046412128,
+      3.801936401613502,
+      3.8019010644552216
+    ],
+    "chord": "Amaj7",
+    "baseFrequency": 432,
+    "harmonics": [
+      1642,
+      1642,
+      1642,
+      1642,
+      1642
+    ]
+  },
+  "metadata": {
+    "witness": "phash:v1:organism:b7de5ae2e3320708",
+    "witnessStatement": "I, phash:v1:organism:b7de5ae2e3320708, witness the birth of this soul in the mesh.",
+    "witnessTime": "2025-08-29T21:54:05.709Z",
+    "created": "2025-08-29T21:54:05.710Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}

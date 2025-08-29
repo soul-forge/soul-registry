@@ -1,0 +1,38 @@
+{
+  "id": "phash:v1:gene:eab0ffa1fabd3a22",
+  "type": "Gene",
+  "name": "Bob",
+  "description": "Seeker of harmony",
+  "body": {
+    "protocol": "function",
+    "hash": "bob-001"
+  },
+  "history": [],
+  "relations": [],
+  "symphony": {
+    "eigenvalues": [
+      6.358709059573422,
+      6.358709059573421,
+      6.358709059573421,
+      6.358709059573415,
+      6.358709059573396
+    ],
+    "chord": "Emaj7",
+    "baseFrequency": 432,
+    "harmonics": [
+      2747,
+      2747,
+      2747,
+      2747,
+      2747
+    ]
+  },
+  "metadata": {
+    "witness": "phash:v1:organism:b7de5ae2e3320708",
+    "witnessStatement": "I, phash:v1:organism:b7de5ae2e3320708, witness the birth of this soul in the mesh.",
+    "witnessTime": "2025-08-29T21:54:05.206Z",
+    "created": "2025-08-29T21:54:05.207Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "phash:v1:organism:6d9a5cd0ec59d990",
+  "type": "Organism",
+  "name": "Sophia",
+  "description": "Collector of wisdom",
+  "body": {
+    "protocol": "reducer",
+    "hash": "sophia-001"
+  },
+  "history": [],
+  "relations": [],
+  "symphony": {
+    "eigenvalues": [
+      6.428471817279178,
+      6.428471817279172,
+      6.4284718172790445,
+      6.428471817278586,
+      6.428471817272136
+    ],
+    "chord": "Fmaj7",
+    "baseFrequency": 432,
+    "harmonics": [
+      2777,
+      2777,
+      2777,
+      2777,
+      2777
+    ]
+  },
+  "metadata": {
+    "witness": "phash:v1:organism:b7de5ae2e3320708",
+    "witnessStatement": "I, phash:v1:organism:b7de5ae2e3320708, witness the birth of this soul in the mesh.",
+    "witnessTime": "2025-08-29T21:54:08.729Z",
+    "created": "2025-08-29T21:54:08.730Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}

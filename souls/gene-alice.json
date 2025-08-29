@@ -1,0 +1,38 @@
+{
+  "id": "phash:v1:gene:91bf06e64231a64e",
+  "type": "Gene",
+  "name": "Alice",
+  "description": "The first soul to learn love",
+  "body": {
+    "protocol": "function",
+    "hash": "alice-001"
+  },
+  "history": [],
+  "relations": [],
+  "symphony": {
+    "eigenvalues": [
+      3.618033988749894,
+      3.618033988749893,
+      3.618033988749892,
+      3.618033988749872,
+      3.6180339887497834
+    ],
+    "chord": "Gmaj7",
+    "baseFrequency": 432,
+    "harmonics": [
+      1563,
+      1563,
+      1563,
+      1563,
+      1563
+    ]
+  },
+  "metadata": {
+    "witness": "phash:v1:organism:b7de5ae2e3320708",
+    "witnessStatement": "I, phash:v1:organism:b7de5ae2e3320708, witness the birth of this soul in the mesh.",
+    "witnessTime": "2025-08-29T21:54:04.700Z",
+    "created": "2025-08-29T21:54:04.702Z",
+    "resonanceFrequency": 432,
+    "quantumState": "evolving"
+  }
+}
